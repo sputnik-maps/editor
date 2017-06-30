@@ -5,10 +5,11 @@
   "main": "''",
   "scripts": {
     "stats": "webpack --config config/webpack.production.config.js --profile --json > stats.json",
+    "start": "webpack --config config/webpack.dev.config.js",
     "build": "webpack --config config/webpack.production.config.js --progress --profile --colors",
     "test": "wdio config/wdio.conf.js",
     "test-watch": "wdio config/wdio.conf.js --watch",
-    "start": "webpack-dev-server --progress --profile --colors --watch-poll --config config/webpack.config.js",
+    "start-wds": "webpack-dev-server --progress --profile --colors --watch-poll --config config/webpack.config.js",
     "lint": "eslint --ext js --ext jsx {src,test}",
     "lint-styles": "stylelint 'src/styles/*.scss'"
   },
@@ -31,7 +32,7 @@
     "lodash.clonedeep": "^4.5.0",
     "lodash.isequal": "^4.4.0",
     "lodash.throttle": "^4.1.1",
-    "mapbox-gl": "^0.33.0",
+    "mapbox-gl": "^0.38.0",
     "mapbox-gl-inspect": "^1.2.2",
     "mapbox-gl-style-spec": "^8.11.0",
     "mousetrap": "^1.6.0",
@@ -123,6 +124,7 @@
     "webdriverio": "^4.6.2",
     "webpack": "1.14.0",
     "webpack-cleanup-plugin": "^0.4.1",
-    "webpack-dev-server": "1.16.2"
+    "webpack-dev-server": "1.16.2",
+    "webpack-simple-progress-plugin": "0.0.2"
   }
 }
